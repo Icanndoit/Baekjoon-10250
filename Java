@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Practice {  // main 클래스
+    public static int func(int h, int w, int n) {
+        if(n % h == 0)
+            return h * 100 + (n / h);
+        else
+            return (n % h) * 100 + (n / h + 1);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int s, i = 0;
+
+        s = input.nextInt();
+        while(i < s) {
+            int h, w, n;   // 높이, 각 층의 호수, n번째 손님
+            h = input.nextInt();  w = input.nextInt();  n = input.nextInt();
+            System.out.println(func(h, w, n));
+            i += 1;
+        }
+
+    }
+
+}
