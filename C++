@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main(void) {
+
+	int c;  cin >> c;
+	for (int i = 0; i < c; i++) {
+		int h, w, n;   // 높이, 각 층의 호수, n번째 손님
+		cin >> h;  cin >> w;  cin >> n;
+		if (n % h == 0)
+			cout << h * 100 + (n / h) << endl;
+		else
+			cout << (n % h) * 100 + (n / h + 1) << endl;
+	}
+
+	return 0;
+}
