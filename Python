@@ -1,0 +1,7 @@
+for i in range(int(input())):
+    h, w, n = map(int, input().split())  # 높이, 각층의 방수, n번째 손님
+    high, neww = n % h, n // h
+    if high == 0:
+        print(h * 100 + neww)
+    else:
+        print(high * 100 + (neww + 1))
