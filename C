@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void) {
+	int c;
+	scanf("%d", &c);
+
+	for (int i = 0; i < c; i++) {
+		int h, w, n;   // 높이, 각 층의 호수, n번째 손님
+		scanf("%d %d %d", &h, &w, &n);
+		if (n % h == 0)
+			printf("%d\n", h * 100 + (n / h));
+		else
+			printf("%d\n", (n % h) * 100 + (n / h + 1));
+	}
+
+	return 0;
+}
